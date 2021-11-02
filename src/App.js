@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from './Components/Form';
+import List from './Components/List';
 
 class App extends React.Component {
   constructor (){
@@ -22,12 +23,15 @@ class App extends React.Component {
 
 
   render() {
-    console.log(this.state.tasks)
     return (
       <>
         <h1>To do list</h1>
         <Form 
           addTask= {this.addTask}
+        />
+
+        <List 
+          tasks= {this.state.tasks}
         />
       </>
     );
