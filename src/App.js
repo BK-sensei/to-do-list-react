@@ -7,7 +7,8 @@ class App extends React.Component {
 
     // State initial
     this.state = {
-      tasks: ""
+      tasks: [],
+      task: ""
     }
   }
 
@@ -17,13 +18,18 @@ class App extends React.Component {
     console.log(newTask)
   }
 
+  handleTaskDescriptionChange(e){
+    this.setState({task: e.target.value})
+  }
+
 
   render() {
     return (
       <>
         <h1>To do list</h1>
         <Form 
-          addTask={this.addTask}
+          addTask= {this.addTask}
+          onChange= {this.handleTaskDescriptionChange}
         />
       </>
     );
