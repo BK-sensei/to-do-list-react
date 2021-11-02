@@ -1,11 +1,13 @@
 import React from 'react';
+import Form from './Components/Form';
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        
-      </div>
+      <>
+        <h1>To do list</h1>
+        <Form />
+      </>
     );
   }
 }
