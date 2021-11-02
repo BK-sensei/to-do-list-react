@@ -7,21 +7,14 @@ class App extends React.Component {
 
     // State initial
     this.state = {
-      tasks: [],
-      task: ""
+      tasks: []
     }
   }
 
-  // Méthodes
-
-  addTask(newTask){
-    console.log(newTask)
+  // Méthode
+  addTask(string){
+    console.log(string)
   }
-
-  handleTaskDescriptionChange(e){
-    this.setState({task: e.target.value})
-  }
-
 
   render() {
     return (
@@ -29,7 +22,6 @@ class App extends React.Component {
         <h1>To do list</h1>
         <Form 
           addTask= {this.addTask}
-          onChange= {this.handleTaskDescriptionChange}
         />
       </>
     );
