@@ -23,13 +23,13 @@ class Form extends Component {
     handleSubmit(e){
         e.preventDefault()
         this.props.addTask(this.state.task)
+        // this.setState({task: ""})        ----> truc de Marco je suis pas sur que ça serve à voir
     }
 
     render() {
+        
         return (
-            <form
-                onSubmit= {this.handleSubmit}
-            >
+            <form onSubmit= {this.handleSubmit}>
                 <input 
                     type="text" 
                     onChange={this.handleTaskDescriptionChange}

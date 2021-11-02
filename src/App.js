@@ -9,14 +9,19 @@ class App extends React.Component {
     this.state = {
       tasks: []
     }
+
+    this.addTask = this.addTask.bind(this)
   }
 
   // Méthode
-  addTask(string){
-    console.log(string)
+  addTask(str){
+    let aaa = {description: str, status: "To do"}
+    this.setState({tasks: [aaa, ...this.state.tasks ]})
   }
 
+
   render() {
+    console.log(this.state.tasks)
     return (
       <>
         <h1>To do list</h1>
