@@ -9,14 +9,15 @@ class App extends React.Component {
     this.state = {
       tasks: []
     }
-
+    
+    // Bindind de la méthode
     this.addTask = this.addTask.bind(this)
   }
 
   // Méthode
   addTask(str){
-    let aaa = {description: str, status: "To do"}
-    this.setState({tasks: [aaa, ...this.state.tasks ]})
+    let newTask = {description: str, status: "To do"}          // la description est le paramètre de la fonction 'addTask'
+    this.setState({tasks: [newTask, ...this.state.tasks]})    // ajout au tableau 'state tasks' un objet task + l'élément ajouté est mis au début du tableau
   }
 
 
