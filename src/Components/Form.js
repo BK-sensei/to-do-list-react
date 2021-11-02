@@ -6,6 +6,7 @@ class Form extends Component {
         super()
 
         // State initial
+
         this.state = {
             task: ""
         }
@@ -29,13 +30,15 @@ class Form extends Component {
     render() {
         
         return (
-            <form onSubmit= {this.handleSubmit}>
+            <form className="d-flex mt-3 mb-3" onSubmit= {this.handleSubmit}>
                 <input 
+                    className="form-control"
                     type="text" 
                     onChange={this.handleTaskDescriptionChange}
                 />
                 
                 <button 
+                    className="btn btn-warning text-white"
                     type="submit"
                     >Submit
                 </button>

@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from './Components/Form';
 import List from './Components/List';
 
@@ -24,16 +25,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="d-flex flex-column m-3">
         <h1>To do list</h1>
         <Form 
           addTask= {this.addTask}
         />
 
         <List 
-          tasks= {this.state.tasks}
+          tasks = {this.state.tasks}
         />
-      </>
+      </div>
     );
   }
 }
