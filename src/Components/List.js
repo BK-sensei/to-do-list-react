@@ -10,14 +10,16 @@ class List extends Component {
                 <h2>List</h2>
                 {tasks.map( (e,i) => ( 
                     <div className="d-flex justify-content-between border rounded p-2">
+
+                        {/* Description de la tâche */}
                         <div className="d-flex flex-column">
                             <p className="fw-bold">Description</p>
                             <p>{e.description}</p>
                         </div>                     
 
-                        {/* Boutons Modifier et Supprimer */}
                         <div className="d-flex">
 
+                            {/* Statut de la tâche */}
                             <div className="d-flex flex-column me-4">
                                 <p className="fw-bold">Statut</p>
                                 <p>{e.status}</p>
@@ -45,6 +47,7 @@ class List extends Component {
                                 >Delete 
                             </button>
                         </div>
+                        
                     </div>
 
                 ))}

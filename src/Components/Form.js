@@ -30,7 +30,7 @@ class Form extends Component {
     render() {
         
         return (
-            <form className="d-flex mt-3 mb-3" onSubmit= {this.handleSubmit}>
+            <form className="d-flex mt-3 mb-3" onSubmit={this.handleSubmit}>
                 <input 
                     className="form-control"
                     type="text" 

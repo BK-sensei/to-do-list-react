@@ -12,17 +12,20 @@ class App extends React.Component {
       tasks: []
     }
     
-    // Bindind de la méthode
+    // Bindind des méthodes
     this.addTask = this.addTask.bind(this)
     this.deleteTask = this.deleteTask.bind(this)
   }
 
-  // Méthodes
+  //---- Méthodes
+
+  // Fontion ajout d'une tâche
   addTask(str){
     let newTask = {description: str, status: "To do"}          // la description est le paramètre de la fonction 'addTask'
     this.setState({tasks: [newTask, ...this.state.tasks]})    // ajout au tableau 'state tasks' un objet task + l'élément ajouté est mis au début du tableau
   }
 
+  // Fontion suppression d'une tâche
   deleteTask(e){
     console.log(e.target.id);
     this.state.tasks.splice(e.target.id,1)
