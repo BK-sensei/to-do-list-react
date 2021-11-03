@@ -34,6 +34,7 @@ class Form extends Component {
                 <input 
                     className="form-control"
                     type="text" 
+                    placeholder="Add a new task"
                     onChange={this.handleTaskDescriptionChange}
                 />
                 

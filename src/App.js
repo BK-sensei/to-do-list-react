@@ -14,12 +14,21 @@ class App extends React.Component {
     
     // Bindind de la méthode
     this.addTask = this.addTask.bind(this)
+    this.deleteTask = this.deleteTask.bind(this)
   }
 
-  // Méthode
+  // Méthodes
   addTask(str){
     let newTask = {description: str, status: "To do"}          // la description est le paramètre de la fonction 'addTask'
     this.setState({tasks: [newTask, ...this.state.tasks]})    // ajout au tableau 'state tasks' un objet task + l'élément ajouté est mis au début du tableau
+  }
+
+  deleteTask(e){
+    console.log(e.target.id);
+    this.state.tasks.splice(e.target.id,1)
+    this.setState({
+      tasks : this.state.tasks
+    })
   }
 
 
@@ -33,6 +42,7 @@ class App extends React.Component {
 
         <List 
           tasks = {this.state.tasks}
+          deleteTask = {this.deleteTask}
         />
       </div>
     );
